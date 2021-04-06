@@ -6,7 +6,7 @@ import { CalculateDistanceBetweenAddresses } from "./usecase/calculateDistanceBe
 
 const routes = express();
 
-const key = "AIzaSyBBsrCVXJvqC3MfSX_UR1LQn_zDpwh7KJo";
+const key = process.env.GOOGLE_API_KEY;
 const baseUrl = "https://maps.googleapis.com/maps/api/geocode/json";
 
 function makeUrl(streetName: string): string {
