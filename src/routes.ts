@@ -3,6 +3,7 @@ import axios from "axios";
 import { Address } from "./domain/address";
 import { Coordinate } from "./domain/coordinate";
 import { CalculateDistanceBetweenAddresses } from "./usecase/calculateDistanceBetweenAddresses";
+require("dotenv").config();
 
 const routes = express();
 
