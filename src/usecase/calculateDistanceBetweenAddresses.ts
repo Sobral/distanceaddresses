@@ -19,6 +19,10 @@ export class CalculateDistanceBetweenAddresses {
     this.distanceBetweenAddresses = [];
     this.furthest = [];
     this.nearest = [];
+
+    this.calculateDistanceBetweenAddresses();
+    this.getStatisticalDistances();
+    this.getClusteredDistances();
   }
 
   calculateDistanceBetweenAddresses(): void {
@@ -56,8 +60,6 @@ export class CalculateDistanceBetweenAddresses {
   }
 
   getClusteredDistances() {
-    this.getStatisticalDistances();
-
     this.distanceBetweenAddresses.forEach((element) => {
       if (element.distance >= this.midRange) {
         this.furthest.push(element);

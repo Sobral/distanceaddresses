@@ -63,9 +63,6 @@ routes.get("/distance/addresses", function (req, res) {
           processedAddresses
         );
 
-        distanceBetweenAddresses.calculateDistanceBetweenAddresses();
-        distanceBetweenAddresses.getClusteredDistances();
-
         resolve(
           res.json({
             status: "OK",
